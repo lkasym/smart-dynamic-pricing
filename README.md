@@ -126,12 +126,16 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 🙌 Credits
 
-* **Developer:** Lakshit Mundra
-* **Tech Stack:**
+* **Developers:**  
+  - Lakshit Mundra  
+  - Parth Tripathi  
+  - Arnav Deshmukh  
 
-  * 🧠 TensorFlow (Deep RL)
-  * ⚙️ Flask (API Backend)
-  * 🌐 React + Tailwind CSS (Frontend Dashboard)
+* **Tech Stack:**
+  - 🧠 TensorFlow (Deep RL)  
+  - ⚙️ Flask (API Backend)  
+  - 🌐 React + Tailwind CSS (Frontend Dashboard)
+
 
 ---
 

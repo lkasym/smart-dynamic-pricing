@@ -1,9 +1,23 @@
+**Troubleshooting image visibility**
 
+It seems the user is having trouble with two images, dashboard.png and business\_metrics.png, not showing up, while banner.png is fine. The inconsistency might be that the user renamed the banner image to "banner.png," but didn't rename the other two files. I see those images were originally uploaded as "/mnt/data/business\_metrics.png" and "/mnt/data/dashboard.png," which is referenced in the README. Perhaps they didn't move the files to the correct directory or forgot to rename them. Let's check!
+
+**Creating a README file**
+
+The user wants a complete, perfect README file with everything, including images correctly linked. Since "banner.png" is visible but the other images aren't, it might be due to file name errors or incorrect paths. I’ll suggest they ensure all image files are correctly named and in the same directory, with relative links like `![Dashboard](./dashboard.png)` and `![Business Metrics](./business_metrics.png)`. I'll also suggest they embed alt text and check for case sensitivity. To help, I'll generate the full README with proper content for them to simply copy and paste.
+
+
+Thought for 8 seconds
+
+
+```markdown
 # 🧠 Smart Dynamic Pricing System
 
 A fully modular and production-grade AI-powered pricing engine built using **Deep Reinforcement Learning** to dynamically adjust product prices based on customer behavior, time of day, competition, and market demand.
 
-![Banner](banner.png)
+<p align="center">
+  <img src="banner.png" alt="Banner" style="width:100%; max-width:900px;" />
+</p>
 
 ---
 
@@ -11,8 +25,8 @@ A fully modular and production-grade AI-powered pricing engine built using **Dee
 
 - 🎯 **Dueling DQN Agent** for stable and efficient learning  
 - 🛒 **Simulated E-commerce Environment** with customer segments, competitor dynamics & time-based pricing  
-- 📊 **Human Baseline Comparisons** (Fixed, Adaptive, Time-based, and Combined strategies)  
-- 🌐 **React Dashboard** to visualize product trends, customer segmentation, and agent performance  
+- 📊 **Human Baseline Comparisons** (Fixed, Adaptive, Time-based, Combined)  
+- 🌐 **React Dashboard** to visualize product trends, customer segmentation & agent performance  
 - 🔬 **Reward System** to track improvement over human logic  
 
 ---
@@ -46,7 +60,7 @@ smart-dynamic-pricing/
 ├── frontend/               # React + Tailwind dashboard
 │   ├── src/
 │   ├── public/
-│   └── ...
+│   └── …
 │
 ├── backend/                # Flask + DQN model + API
 │   ├── enhanced\_api.py
@@ -55,9 +69,9 @@ smart-dynamic-pricing/
 │   ├── human\_baseline.py
 │   └── enhanced\_reward\_system.py
 │
-├── banner.png
-├── dashboard.png
-├── business\_metrics.png
+├── banner.png              # Project banner
+├── dashboard.png           # Dashboard overview screenshot
+├── business\_metrics.png    # Business metrics screenshot
 └── README.md
 
 ````
@@ -66,19 +80,17 @@ smart-dynamic-pricing/
 
 ## 🛠️ Setup & Installation
 
-### 🔹 Frontend
+### Frontend
 
-
+```bash
 cd frontend
 npm install
 npm run dev
 ````
 
-> Runs at `http://localhost:3000/` by default
+> Runs at `http://localhost:3000/`
 
----
-
-### 🔹 Backend (Flask API)
+### Backend (Flask API)
 
 ```bash
 cd backend
@@ -88,37 +100,35 @@ python enhanced_api.py
 
 > Runs at `http://localhost:5000/`
 
-Make sure to use **Python 3.8+** and **Node.js 16+**
+> **Requirements:** Python 3.8+, Node.js 16+
 
 ---
 
 ## 📈 Live Dashboard Previews
 
-### 📊 Revenue, Retention, and Segments
+<p align="center">
+  <img src="dashboard.png" alt="Dashboard Overview" style="width:80%; max-width:800px;" />
+</p>
 
-![Dashboard Overview](dashboard.png)
-
----
-
-### 📈 Customer Metrics and Revenue vs Baseline
-
-![Business Metrics](business_metrics.png)
+<p align="center">
+  <img src="business_metrics.png" alt="Business Metrics" style="width:80%; max-width:800px;" />
+</p>
 
 ---
 
 ## 🧪 How It Works
 
-1. The agent uses a **Dueling Double DQN** to learn dynamic pricing strategies
+1. The agent uses a **Dueling Double DQN** to learn pricing strategies.
 2. The environment simulates:
 
    * Time-of-day influence
    * Customer segment preferences
    * Competitor price adjustments
-3. Agent is rewarded based on:
+3. The agent is rewarded based on:
 
    * 💰 Profit earned
    * 📈 Improvement over human baseline strategies
-4. All insights are visualized in a user-friendly frontend
+4. All insights are visualized in a user-friendly React frontend.
 
 ---
 
@@ -130,15 +140,16 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 🙌 Credits
 
-* Developed  by **Lakshit Mundra**
-* Powered by:
+* **Developer:** Lakshit Mundra
+* **Tech Stack:**
 
   * 🧠 TensorFlow (Deep RL)
   * ⚙️ Flask (API Backend)
-  * 🌐 React + Tailwind (Frontend Dashboard)
+  * 🌐 React + Tailwind CSS (Frontend Dashboard)
 
 ---
 
-## 🌟 Star this repo if you like the project!
-hen you are!
+## 🌟 If you found this helpful, please give it a star!
+
+```
 ```

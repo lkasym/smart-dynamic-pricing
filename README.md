@@ -3,36 +3,44 @@
 
 A fully modular and production-grade AI-powered pricing engine built using **Deep Reinforcement Learning** to dynamically adjust product prices based on customer behavior, time of day, competition, and market demand.
 
+![Banner](banner.png)
+
 ---
 
 ## 🚀 Project Highlights
 
-- 🎯 **Dueling DQN Agent** for stable and efficient learning
-- 🛒 **Simulated E-commerce Environment** with customer segments, competitor dynamics & time-based pricing
-- 📊 **Human Baseline Comparisons** (Fixed, Adaptive, Time-based, and Combined strategies)
-- 🌐 **React Dashboard** to visualize product trends, customer segmentation, and agent performance
-- 🔬 **Reward System** to track improvement over human logic
+- 🎯 **Dueling DQN Agent** for stable and efficient learning  
+- 🛒 **Simulated E-commerce Environment** with customer segments, competitor dynamics & time-based pricing  
+- 📊 **Human Baseline Comparisons** (Fixed, Adaptive, Time-based, and Combined strategies)  
+- 🌐 **React Dashboard** to visualize product trends, customer segmentation, and agent performance  
+- 🔬 **Reward System** to track improvement over human logic  
 
 ---
 
 ## 🧠 Architecture Overview
 
-```mermaid
-graph TD;
-    A[React Frontend] --> B[Flask API]
-    B --> C[RL Agent (Dueling DQN)]
-    B --> D[Market Environment]
-    B --> E[Reward System]
-    D --> F[Customer Segments]
-    D --> G[Product Inventory]
-    D --> H[Competitor Prices]
-````
+```
+
+Frontend (React Dashboard)
+↓
+Flask API Server
+↓
++----------------------+
+\|   Dueling DQN Agent  |
+\|   Reward System      |
+\|   Market Environment |
++----------------------+
+↓
+Customer Segments, Products, Time-of-Day, Competitor Pricing
+
+```
 
 ---
 
 ## 📂 Project Structure
 
 ```
+
 smart-dynamic-pricing/
 │
 ├── frontend/               # React + Tailwind dashboard
@@ -41,14 +49,18 @@ smart-dynamic-pricing/
 │   └── ...
 │
 ├── backend/                # Flask + DQN model + API
-│   ├── enhanced_api.py
-│   ├── enhanced_agent.py
-│   ├── enhanced_env.py
-│   ├── human_baseline.py
-│   └── enhanced_reward_system.py
+│   ├── enhanced\_api.py
+│   ├── enhanced\_agent.py
+│   ├── enhanced\_env.py
+│   ├── human\_baseline.py
+│   └── enhanced\_reward\_system.py
 │
+├── banner.png
+├── dashboard.png
+├── business\_metrics.png
 └── README.md
-```
+
+````
 
 ---
 
@@ -56,11 +68,11 @@ smart-dynamic-pricing/
 
 ### 🔹 Frontend
 
-```bash
+
 cd frontend
 npm install
 npm run dev
-```
+````
 
 > Runs at `http://localhost:3000/` by default
 
@@ -80,6 +92,20 @@ Make sure to use **Python 3.8+** and **Node.js 16+**
 
 ---
 
+## 📈 Live Dashboard Previews
+
+### 📊 Revenue, Retention, and Segments
+
+![Dashboard Overview](dashboard.png)
+
+---
+
+### 📈 Customer Metrics and Revenue vs Baseline
+
+![Business Metrics](business_metrics.png)
+
+---
+
 ## 🧪 How It Works
 
 1. The agent uses a **Dueling Double DQN** to learn dynamic pricing strategies
@@ -96,22 +122,6 @@ Make sure to use **Python 3.8+** and **Node.js 16+**
 
 ---
 
-## 📈 Dashboard Features
-
-* 📦 Real-time product pricing recommendations
-* 🧍 Customer segment profiles (price sensitivity, quality preference)
-* 📊 Reward and profit graphs (agent vs baseline)
-* ⏱️ Time-based pricing curves
-* 📉 Segment-wise demand and satisfaction impact
-
----
-
-## 📊 Sample Result
-
-> “The trained AI agent achieved an average profit improvement of **28.6%** over human pricing strategies across multiple simulated scenarios.”
-
----
-
 ## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
@@ -120,7 +130,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 🙌 Credits
 
-* Developed with ❤️ by **Lakshit Mundra**
+* Developed  by **Lakshit Mundra**
 * Powered by:
 
   * 🧠 TensorFlow (Deep RL)
@@ -129,5 +139,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-
+## 🌟 Star this repo if you like the project!
+hen you are!
 ```

@@ -57,9 +57,7 @@ smart-dynamic-pricing/
 │   ├── human\_baseline.py
 │   └── enhanced\_reward\_system.py
 │
-├── banner.png              # Project banner
-├── dashboard.png           # Dashboard overview screenshot
-├── business\_metrics.png    # Business metrics screenshot
+
 └── README.md
 
 ````
